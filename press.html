@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press Kit | Andrew Byrley</title>
+    <meta name="description" content="Press kit, bios, and high-resolution photos for Andrew Byrley.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">Andrew Byrley</a>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="index.html#research">Research</a>
+                <a href="index.html#career">Career</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Press Content -->
+    <section class="section press-section">
+        <div class="container small-container">
+            <h1 class="section-title">Press Kit</h1>
+
+            <!-- Headshot -->
+            <div class="press-item">
+                <h2 class="press-subtitle">Headshot</h2>
+                <div class="press-photo-container">
+                    <img src="Andrew Byrley Portrait.jpg" alt="Andrew Byrley Headshot" class="press-image">
+                    <a href="Andrew Byrley Portrait.jpg" download="Andrew_Byrley_Headshot.jpg"
+                        class="btn btn-secondary press-download-btn">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Download hi-res photo
+                    </a>
+                </div>
+            </div>
+
+            <!-- Short Bio -->
+            <div class="press-item">
+                <div class="press-header-row">
+                    <h2 class="press-subtitle">Short Bio <span class="bio-length">(~50 words)</span></h2>
+                    <button class="copy-btn" data-target="short-bio">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        Copy
+                    </button>
+                </div>
+                <div class="bio-box" id="short-bio">
+                    <p>Andrew Byrley is a Winter Fellow at GovAI in London. A 16-year
+                        veteran of the U.S. Foreign Service and former robotics engineer, he focuses on the practical
+                        implementation of AI governance and bridging the gap between high-level policy and technical
+                        reality.</p>
+                </div>
+            </div>
+
+            <!-- Long Bio -->
+            <div class="press-item">
+                <div class="press-header-row">
+                    <h2 class="press-subtitle">Long Bio <span class="bio-length">(~150 words)</span></h2>
+                    <button class="copy-btn" data-target="long-bio">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        Copy
+                    </button>
+                </div>
+                <div class="bio-box" id="long-bio">
+                    <p>Andrew Byrley is a Winter Fellow at GovAI in London, where
+                        he researches the implementation of the EU AI Act. He is currently on leave from a 16-year
+                        career in the U.S. Foreign Service, where his work spanned technology policy, economic
+                        statecraft, and countering authoritarian influence.</p>
+                    <p>Andrew combines his diplomatic experience with a technical background in robotics engineering
+                        (MS, Georgia Tech). This dual perspective drives his focus on "policy engineering" — ensuring
+                        that
+                        governance frameworks are not just theoretically sound but operationally viable. Most recently,
+                        he led economic and digital policy at the U.S. Embassy in Riga, Latvia, where he developed
+                        strategic communications that positioned economic resilience as central to national security. He
+                        has also implemented economic policy in West Africa and served as a technical security engineer.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-disclaimer">The views expressed are my own and do not represent the official position of
+                the U.S. Government.</p>
+            <p class="footer-copyright">© 2026 Andrew Byrley</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="press.js"></script>
+</body>
+
+</html>

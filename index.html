@@ -28,14 +28,13 @@
     </nav>
 
     <!-- Hero Section -->
-    <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-content">
             <!-- Left Side: Profile Card -->
             <div class="hero-visual">
                 <div class="profile-card">
                     <div class="hero-photo">
-                        <img src="Andrew Byrley Portrait 1.jpg" alt="Andrew Byrley"
+                        <img src="Andrew Byrley Portrait.jpg" alt="Andrew Byrley"
                             style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
                     </div>
                     <h2 class="card-name">Andrew Byrley</h2>
@@ -70,6 +69,10 @@
                             </svg>
                         </a>
                     </div>
+                    <!-- Press Link -->
+                    <div class="press-link-container">
+                        <a href="press.html" class="press-link">Press photos</a>
+                    </div>
                 </div>
             </div>
 
@@ -79,8 +82,9 @@
                 <p class="intro-subtitle">I don't just analyze AI policy. I make it work.</p>
 
                 <div class="hero-cta">
-                    <a href="#" class="btn btn-primary">Resume</a>
-                    <a href="#research" class="btn btn-secondary">Projects</a>
+                    <a href="https://drive.google.com/file/d/1f2T_ZCFBbbBureVDt785X2kWMq2Ya5i0/view?usp=sharing"
+                        class="btn btn-primary">Resume</a>
+                    <a href="#research" class="btn btn-secondary">Research</a>
                 </div>
 
                 <div class="intro-bio">
@@ -94,25 +98,24 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section about">
+    <section id="about" class="section about section-alt">
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <p>Sixteen years as a U.S. Foreign Service Officer, focused on technology policy, economic statecraft,
-                    and countering authoritarian influence. Most recently led economic and digital policy at Embassy
-                    Riga, where I developed Latvia's "economic security is national security" strategy—a framework now
-                    used by the President and Prime Minister to counter Russian and Chinese influence. Built interagency
-                    coalitions on cybersecurity, AI export controls, and PRC counter-influence.
+                <p>Currently a Winter Fellow at the Centre for the Governance of AI in London, focused on practical
+                    approaches to EU AI Act compliance.
                 </p>
-                <p>Earlier: economic diplomacy in West Africa, staff work supporting the Assistant Secretary for
-                    European Affairs, and
-                    technical surveillance countermeasures.</p>
+                <p>I'm on leave from a 16-year career in the U.S. Foreign Service, where I focused on technology
+                    policy, economic statecraft, and countering authoritarian influence. Most recently led economic and
+                    digital policy at Embassy Riga, developing a strategic communications plan that positioned economic
+                    resilience as central to Latvia's national security—messaging that Latvia's President and Prime
+                    Minister echoed in their own public remarks. Earlier: economic diplomacy in West Africa, staff work
+                    supporting the Assistant Secretary for European Affairs, and technical surveillance countermeasures.
+                </p>
                 <p>
                     Before diplomacy, I was an engineer. My master's is in robotics from Georgia Tech, and that
                     technical foundation shapes how I approach policy: I care less about what regulations say than
-                    whether organizations can actually implement them.
-                    Currently a Winter Fellow at the Centre for the Governance of AI in London, focused on practical
-                    approaches to EU AI Act compliance.</p>
+                    whether organizations can actually implement them.</p>
             </div>
         </div>
     </section>
@@ -125,18 +128,18 @@
             <div class="project">
                 <div class="project-header">
                     <h3 class="project-title">Automating GPAI Compliance Documentation</h3>
-                    <span class="project-tag">Winter Fellow, Centre for the Governance of AI (2026)</span>
+                    <span class="project-tag">Winter Fellow, GovAI (2026)</span>
                 </div>
                 <div class="project-description">
                     <p>The EU AI Act requires general-purpose AI providers to produce detailed technical documentation
-                        under Article 53. But standard model cards—even from major labs—don't contain all required
+                        under Article 53. But standard model cards — even from major labs — don't contain all required
                         information, particularly around energy consumption and computational resources.</p>
                     <p>I built an MCP server tool that extracts metadata from HuggingFace model cards and generates
                         compliance documentation automatically. Validation testing against models including Microsoft
-                        Phi-4 and DeepSeek-R1 revealed that the tool works—but the underlying documentation gaps will
+                        Phi-4 and DeepSeek-R1 revealed that the tool works, but the underlying documentation gaps will
                         create industry-wide compliance challenges.</p>
-                    <p class="project-insight">The problem isn't automation. It's that the data regulators need doesn't
-                        exist yet.</p>
+                    <!-- <p class="project-insight">The problem isn't automation. It's that the data regulators need doesn't
+                        exist yet.</p> -->
                 </div>
                 <div class="project-links">
                     <a href="https://drive.google.com/file/d/1iFqem5TbEAmjZysM_7H5j2YPujBiatSN/view?usp=sharing"
@@ -163,7 +166,7 @@
     </section>
 
     <!-- Career Section -->
-    <section id="career" class="section career">
+    <section id="career" class="section career section-alt">
         <div class="container">
             <h2 class="section-title">Selected Career Highlights</h2>
 
@@ -172,20 +175,23 @@
                 <p>Selected for the competitive Winter Fellowship at the Centre for the Governance of AI in London,
                     taking leave from a 16-year diplomatic career to specialize in AI governance. Developing technical
                     recommendations for AI agent audit trails under EU AI Act Article 12, arguing that valid audit logs
-                    must capture an agent's reasoning ("chain of thought") alongside its actions—not just tool outputs.
-                    Built and deployed an open-source compliance tool that automates Article 53 documentation,
+                    must capture an agent's reasoning ("chain of thought") alongside its actions — not just tool
+                    outputs.
+                    Built and deployed an <a href="https://github.com/byrleyar/eu-ai-act-mcp" target="_blank"
+                        rel="noopener">open-source compliance tool</a> that automates Article 53 documentation,
                     demonstrating that governance requirements can be operationalized into infrastructure.</p>
             </div>
 
             <div class="career-item">
                 <h3 class="career-title">Latvia: Economic & Digital Policy <span class="career-years">(2022–2025)</span>
                 </h3>
-                <p>Led development of Embassy Riga's "economic security is national security" framework, adopted by
-                    Latvia's President and Prime Minister as their approach to countering malign influence. Built
-                    interagency coalitions that removed a Chinese surveillance company from Riga airport and secured the
-                    contract for a U.S. competitor. Established the embassy's first cyber/digital working group spanning
-                    Treasury, DOJ, Secret Service, and FBI. Secured Latvia's exit from the PRC-dominated 16+1 forum with
-                    full U.S. support.</p>
+                <p>Led development of a strategic communications plan positioning economic resilience as central to
+                    Latvia's national security. Coordinated rollout including an ambassadorial op-ed, media interviews,
+                    and targeted engagement with parliamentarians and business leaders. Success metric: Latvia's
+                    President and Prime Minister began echoing our talking points in their public remarks — proof the
+                    strategy landed. Also built interagency coalitions that removed a Chinese surveillance company from
+                    Riga airport and secured the contract for a U.S. competitor. Established the embassy's first
+                    cyber/digital working group spanning Treasury, DOJ, Secret Service, and FBI.</p>
             </div>
 
             <div class="career-item">
@@ -203,6 +209,18 @@
                 <p>Wrote the first-ever Country Commercial Guide for Mauritania. Led AGOA trade negotiations and
                     convinced USTR to shift U.S. strategy on judicial recordkeeping for slavery cases. Served as Acting
                     DCM. Coordinated election monitoring for Mauritania's first peaceful democratic transition of power.
+                </p>
+            </div>
+
+            <div class="career-item">
+                <h3 class="career-title">Belize: Acting Public Affairs Officer <span
+                        class="career-years">(2015–2016)</span>
+                </h3>
+                <p>Served as Acting Public Affairs Officer for six months while maintaining full consular
+                    duties—managing press strategy, the Ambassador's weekly media brief, and public diplomacy
+                    programming. Coordinated comprehensive press coverage for the USS Comfort humanitarian medical
+                    mission. Handled sensitive media inquiries regarding embassy personnel. Received a Meritorious Honor
+                    Award for contributions that maintained mission effectiveness during a critical staffing gap.
                 </p>
             </div>
 
@@ -245,7 +263,8 @@
                     </svg>
                     GitHub
                 </a>
-                <a href="#" class="btn btn-secondary">
+                <a href="https://drive.google.com/file/d/1f2T_ZCFBbbBureVDt785X2kWMq2Ya5i0/view?usp=sharing"
+                    class="btn btn-secondary">
                     <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                         <polyline points="14 2 14 8 20 8"></polyline>
