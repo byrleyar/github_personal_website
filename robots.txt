@@ -1,0 +1,6 @@
+# https://andrewbyrley.com/robots.txt
+
+User-agent: *
+Allow: /
+
+Sitemap: https://andrewbyrley.com/sitemap.xml

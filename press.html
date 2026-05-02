@@ -1,113 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Press Kit | Andrew Byrley</title>
-    <meta name="description" content="Press kit, bios, and high-resolution photos for Andrew Byrley.">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Press Kit · Andrew Byrley</title>
+<meta name="description" content="Press kit, bios, and high-resolution photos for Andrew Byrley." />
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="shortcut icon" href="favicon.ico" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --paper:        #F4EFE6;
+    --paper-deep:   #ECE5D6;
+    --ink:          #1B1A17;
+    --ink-soft:     #4A4742;
+    --ink-faint:    #8A857B;
+    --rule:         #D8CFBE;
+    --accent:       oklch(0.42 0.09 25);
+    --accent-soft:  oklch(0.42 0.09 25 / 0.10);
+
+    --font-serif:  "Source Serif 4", "Source Serif Pro", Georgia, serif;
+    --font-sans:   "Inter", system-ui, -apple-system, sans-serif;
+    --font-mono:   "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+    --measure:     38rem;
+    --gutter:      clamp(1.25rem, 4vw, 2rem);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 17px; scroll-behavior: smooth; background: var(--paper); }
+  body {
+    font-family: var(--font-serif);
+    line-height: 1.62;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern", "liga", "onum";
+  }
+  ::selection { background: var(--accent-soft); }
+  h1, h2, h3 { font-weight: 500; letter-spacing: -0.005em; line-height: 1.2; text-wrap: balance; }
+  p { text-wrap: pretty; }
+  a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in oklch, var(--accent) 35%, transparent);
+    text-underline-offset: 0.18em;
+  }
+  a:hover { text-decoration-color: var(--accent); }
+
+  .page {
+    max-width: calc(var(--measure) + var(--gutter) * 2);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+  }
+
+  .topbar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem 0 0;
+    flex-wrap: wrap;
+  }
+  .topbar-name { font-size: 1rem; font-weight: 500; }
+  .topbar-name a { color: var(--ink); text-decoration: none; }
+  .topbar-nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .topbar-nav a {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+  }
+  .topbar-nav a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
+  .label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-faint);
+    font-weight: 500;
+  }
+
+  .head-block { padding: 4rem 0 2.5rem; }
+  .head-block .label { margin-bottom: 1rem; display: block; }
+  .head-block h1 {
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+  }
+  .head-block .lede {
+    margin-top: 1rem;
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    max-width: var(--measure);
+  }
+
+  section.block {
+    padding: 3rem 0;
+    border-top: 1px solid var(--rule);
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+  .row > .label { padding-top: 0.35rem; }
+  .row h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+  }
+  .row .meta {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+    margin-bottom: 1rem;
+  }
+
+  .photo-row {
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    gap: 1.5rem;
+  }
+  .photo-frame {
+    background: var(--paper-deep);
+    padding: 1rem;
+    border-radius: 2px;
+    max-width: 360px;
+  }
+  .photo-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+  }
+  .photo-actions {
+    margin-top: 0.9rem;
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+  }
+  .photo-actions a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 1px;
+  }
+  .photo-actions a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .photo-actions a::after { content: " →"; color: var(--ink-faint); }
+  .photo-actions a:hover::after { color: var(--accent); }
+
+  .bio {
+    background: var(--paper-deep);
+    padding: 1.4rem 5rem 1.4rem 1.5rem;
+    border-radius: 2px;
+    font-size: 1rem;
+    color: var(--ink);
+    line-height: 1.7;
+    position: relative;
+    max-width: var(--measure);
+  }
+  .bio p + p { margin-top: 0.75em; }
+  .copy-btn {
+    position: absolute;
+    top: 0.85rem;
+    right: 0.9rem;
+    background: transparent;
+    border: 1px solid var(--rule);
+    color: var(--ink-soft);
+    padding: 4px 10px;
+    border-radius: 2px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.18s ease;
+  }
+  .copy-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .copy-btn.copied { color: var(--accent); border-color: var(--accent); }
+
+  .row h2 .meta-inline {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--ink-faint);
+    font-weight: 400;
+    margin-left: 0.5rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+
+  footer.foot {
+    padding: 3rem 0 4rem;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    gap: 1.5rem;
+    align-items: baseline;
+  }
+  footer.foot p {
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    color: var(--ink-faint);
+    max-width: var(--measure);
+    line-height: 1.55;
+  }
+  footer.foot p + p { margin-top: 0.5em; }
+
+  @media (max-width: 720px) {
+    html { font-size: 16px; }
+    .topbar { padding-top: 1.25rem; }
+    .topbar-nav { gap: 1.1rem; font-size: 0.8rem; }
+    .row, .photo-row, footer.foot { grid-template-columns: 1fr; gap: 0.6rem; }
+    .row > .label, footer.foot .label { padding-top: 0; }
+    .photo-frame { max-width: 100%; }
+    .copy-btn { position: static; margin-bottom: 0.75rem; }
+    .bio { display: flex; flex-direction: column; padding: 1.4rem 1.5rem; }
+    .bio .copy-btn { align-self: flex-start; }
+  }
+</style>
 </head>
-
 <body>
-    <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <div class="nav-content">
-            <a href="index.html" class="nav-logo">Andrew Byrley</a>
-            <div class="nav-links">
-                <a href="index.html#about">About</a>
-                <a href="index.html#research">Research</a>
-                <a href="index.html#career">Career</a>
-                <a href="index.html#contact">Contact</a>
-            </div>
-        </div>
+
+<div class="page">
+
+  <header class="topbar">
+    <div class="topbar-name"><a href="index.html">Andrew Byrley</a></div>
+    <nav class="topbar-nav" aria-label="Primary">
+      <a href="index.html#about">About</a>
+      <a href="index.html#research">Research</a>
+      <a href="index.html#career">Career</a>
+      <a href="index.html#writing">Writing</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
+  </header>
 
-    <!-- Press Content -->
-    <section class="section press-section">
-        <div class="container small-container">
-            <h1 class="section-title">Press Kit</h1>
+  <div class="head-block">
+    <span class="label">Press kit</span>
+    <h1>Bios &amp; photos for press use.</h1>
+    <p class="lede">
+      Hi-res headshot and ready-to-paste bios. For interview requests or anything else,
+      <a href="index.html#contact">get in touch</a>.
+    </p>
+  </div>
 
-            <!-- Headshot -->
-            <div class="press-item">
-                <h2 class="press-subtitle">Headshot</h2>
-                <div class="press-photo-container">
-                    <img src="Andrew Byrley Portrait.jpg" alt="Andrew Byrley Headshot" class="press-image">
-                    <a href="Andrew Byrley Portrait.jpg" download="Andrew_Byrley_Headshot.jpg"
-                        class="btn btn-secondary press-download-btn">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7 10 12 15 17 10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
-                        Download hi-res photo
-                    </a>
-                </div>
-            </div>
-
-            <!-- Short Bio -->
-            <div class="press-item">
-                <div class="press-header-row">
-                    <h2 class="press-subtitle">Short Bio <span class="bio-length">(~50 words)</span></h2>
-                    <button class="copy-btn" data-target="short-bio">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                        </svg>
-                        Copy
-                    </button>
-                </div>
-                <div class="bio-box" id="short-bio">
-                    <p>Andrew Byrley is a Winter Fellow at GovAI in London. A 16-year
-                        veteran of the U.S. Foreign Service and former robotics engineer, he focuses on the practical
-                        implementation of AI governance and bridging the gap between high-level policy and technical
-                        reality.</p>
-                </div>
-            </div>
-
-            <!-- Long Bio -->
-            <div class="press-item">
-                <div class="press-header-row">
-                    <h2 class="press-subtitle">Long Bio <span class="bio-length">(~150 words)</span></h2>
-                    <button class="copy-btn" data-target="long-bio">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                        </svg>
-                        Copy
-                    </button>
-                </div>
-                <div class="bio-box" id="long-bio">
-                    <p>Andrew Byrley is a Winter Fellow at GovAI in London, where
-                        he researches the implementation of the EU AI Act. He is currently on leave from a 16-year
-                        career in the U.S. Foreign Service, where his work spanned technology policy, economic
-                        statecraft, and countering authoritarian influence.</p>
-                    <p>Andrew combines his diplomatic experience with a technical background in robotics engineering
-                        (MS, Georgia Tech). This dual perspective drives his focus on "policy engineering" — ensuring
-                        that
-                        governance frameworks are not just theoretically sound but operationally viable. Most recently,
-                        he led economic and digital policy at the U.S. Embassy in Riga, Latvia, where he developed
-                        strategic communications that positioned economic resilience as central to national security. He
-                        has also implemented economic policy in West Africa and served as a technical security engineer.
-                    </p>
-                </div>
-            </div>
-
+  <section class="block">
+    <div class="photo-row">
+      <div class="label">Headshot</div>
+      <div>
+        <div class="photo-frame">
+          <img src="Andrew Byrley Portrait.jpg" alt="Andrew Byrley headshot" />
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-disclaimer">The views expressed are my own and do not represent the official position of
-                the U.S. Government.</p>
-            <p class="footer-copyright">© 2026 Andrew Byrley</p>
+        <div class="photo-actions">
+          <a href="Andrew Byrley Portrait.jpg" download="Andrew_Byrley_Headshot.jpg">Download hi-res</a>
+          <a href="Andrew Byrley Portrait.jpg" target="_blank" rel="noopener">Open original</a>
         </div>
-    </footer>
-    <script src="script.js"></script>
-    <script src="press.js"></script>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="row">
+      <div class="label">Short bio</div>
+      <div>
+        <h2>~50 words <span class="meta-inline">For event programs, intros</span></h2>
+        <div class="bio" id="short-bio">
+          <button class="copy-btn" data-target="short-bio">Copy</button>
+          <p>
+            Andrew Byrley is an AI governance researcher and U.S. Foreign Service
+            officer, recently a Winter Fellow at the Centre for the Governance of AI
+            (GovAI) in London. With a master's in robotics from Georgia Tech and sixteen
+            years of diplomatic experience, he studies how AI regulation meets
+            institutional and technical reality.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="row">
+      <div class="label">Long bio</div>
+      <div>
+        <h2>~150 words <span class="meta-inline">For panels, articles, profiles</span></h2>
+        <div class="bio" id="long-bio">
+          <button class="copy-btn" data-target="long-bio">Copy</button>
+          <p>
+            Andrew Byrley is an AI governance researcher and U.S. Foreign Service
+            officer, recently a Winter Fellow at the Centre for the Governance of AI
+            (GovAI) in London, where he researched implementation of the EU AI Act
+            &mdash; Article 12 logging requirements and Article 53 documentation
+            standards for general-purpose AI.
+          </p>
+          <p>
+            Trained as a robotics engineer (MS, Georgia Tech), Andrew brings sixteen
+            years of diplomatic experience to AI governance, focused on the operational
+            readiness question: whether the institutions and organizations subject to AI
+            regulation can actually comply with it. Most recently he led economic and
+            digital policy at the U.S. Embassy in Riga, Latvia, where he built coalitions
+            on digital security and positioned economic resilience as central to national
+            security. Earlier postings spanned economic diplomacy in West Africa, staff
+            work during the Biden transition for the Assistant Secretary for European
+            Affairs, and technical surveillance countermeasures.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="label">Colophon</div>
+    <div>
+      <p>
+        The views expressed are my own and do not represent the official position of the
+        U.S. Government.
+      </p>
+      <p>© 2026 Andrew Byrley.</p>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = document.getElementById(btn.getAttribute('data-target'));
+      if (!target) return;
+      const text = [...target.querySelectorAll('p')].map(p => p.innerText).join('\n\n');
+      navigator.clipboard.writeText(text).then(() => {
+        const original = btn.textContent;
+        btn.textContent = 'Copied';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.classList.remove('copied');
+        }, 1800);
+      });
+    });
+  });
+</script>
+
 </body>
-
 </html>
