@@ -12,7 +12,7 @@ This site is a personal homepage. Content may be cited with attribution to Andre
 ## Current research
 
 - [Automating GPAI Compliance Documentation](https://drive.google.com/file/d/1iFqem5TbEAmjZysM_7H5j2YPujBiatSN/view?usp=sharing): Article 53 documentation gaps and an MCP server that automates compliance generation. ([Code](https://github.com/byrleyar/eu-ai-act-mcp))
-- Worse is Better, Again — Lessons from Internet Protocols for Agentic AI: Co-authored paper comparing IETF governance to MCP/AAIF, arguing retrofitting security to deployed agent protocols will fail.
+- Governing the Agent Protocol Layer: Co-authored paper on what the history of IETF governance can teach the emerging governance of AI agent protocols like MCP — including representation, open process, and building security into governance structures early.
 - ECONBench — AI governance researcher tasks: Designing the AI-governance-researcher track for ECONBench, in collaboration with researchers at Yale.
 - Logging Standards for Autonomous AI Agents: Externalized reasoning as a framework for Article 12 audit logs.
 
