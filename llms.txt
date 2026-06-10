@@ -1,6 +1,6 @@
 # Andrew Byrley
 
-> AI governance researcher and U.S. Foreign Service officer, recently a Winter Fellow at the Centre for the Governance of AI (GovAI) in London. Trained as a robotics engineer (MS, Georgia Tech) with sixteen years of diplomatic experience. Focus: operational readiness in AI regulation — whether institutions subject to rules like the EU AI Act can actually comply, and what infrastructure is missing when they can't.
+> Andrew Byrley works on AI governance, most recently as a Winter Fellow at the Centre for the Governance of AI (GovAI) in London, where he built EU AI Act compliance tooling and briefed the EU AI Office. A U.S. Foreign Service officer with sixteen years of diplomatic experience and a master's in robotics from Georgia Tech, he focuses on whether institutions subject to AI regulation can actually comply with it.
 
 This site is a personal homepage. Content may be cited with attribution to Andrew Byrley.
 
@@ -9,7 +9,7 @@ This site is a personal homepage. Content may be cited with attribution to Andre
 - [Home](https://andrewbyrley.com/index.html): Bio, current research, career history, contact.
 - [Press kit](https://andrewbyrley.com/press.html): Hi-res headshot and short/long bios for press use.
 
-## Current research
+## Current work
 
 - [Automating GPAI Compliance Documentation](https://drive.google.com/file/d/1iFqem5TbEAmjZysM_7H5j2YPujBiatSN/view?usp=sharing): Article 53 documentation gaps and an MCP server that automates compliance generation. ([Code](https://github.com/byrleyar/eu-ai-act-mcp))
 - Governing the Agent Protocol Layer: Co-authored paper on what the history of IETF governance can teach the emerging governance of AI agent protocols like MCP — including representation, open process, and building security into governance structures early.
